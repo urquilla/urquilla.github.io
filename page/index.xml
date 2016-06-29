@@ -21,22 +21,31 @@
 
 &lt;h3 id=&#34;about-me&#34;&gt;About me&lt;/h3&gt;
 
-&lt;p&gt;Salvadorean engineer, project leader, architect and developer.&lt;br /&gt;
+&lt;p&gt;Salvadoran engineer, project leader, architect and developer.&lt;br /&gt;
 Avid autodidact striving to push forward a pragmatic change in the industry.
 Looking to never stop traveling and always making a difference.
-Currently enjoying work and challenges at &lt;a href=&#34;http://mido-sv.com&#34;&gt;Midő sv&lt;/a&gt;&lt;/p&gt;
+Currently enjoying work and challenges at &lt;a href=&#34;http://mido-sv.com&#34;&gt;Midō sv&lt;/a&gt;
+and &lt;a href=&#34;http://sigm.gob.sv&#34;&gt;SIGMuni&lt;/a&gt;&lt;/p&gt;
 
 &lt;!--### Projects--&gt;
 
 &lt;h3 id=&#34;experience&#34;&gt;Experience&lt;/h3&gt;
 
-&lt;h4 id=&#34;midō-international-http-mido-sv-com&#34;&gt;&lt;a href=&#34;http://mido-sv.com&#34;&gt;Midō International&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;sistema-de-información-de-la-gestión-municipal-http-sigm-gob-sv&#34;&gt;&lt;a href=&#34;http://sigm.gob.sv&#34;&gt;Sistema de Información de la Gestión Municipal&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h5 id=&#34;sysadmin-developer-and-tech-consultant&#34;&gt;&lt;em&gt;Sysadmin, Developer And Tech Consultant&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;Software Architect and Linux sysadmin of on premises servers&lt;br /&gt;
+Front end developer with React.js/Node.js stack&lt;br /&gt;
+API developer with Java EE and Play Framework!&lt;/p&gt;
+
+&lt;h4 id=&#34;midō-internacional-http-mido-sv-com&#34;&gt;&lt;a href=&#34;http://mido-sv.com&#34;&gt;Midō Internacional&lt;/a&gt;&lt;/h4&gt;
 
 &lt;h5 id=&#34;technical-lead-and-cto&#34;&gt;&lt;em&gt;Technical Lead And CTO&lt;/em&gt;&lt;/h5&gt;
 
-&lt;p&gt;Interviewed and introduced new members of the technical team.
+&lt;p&gt;Interview and introduce new members of the technical team.
 Architect and develop solutions for government and financial entities, as well for diverse enterprises with technological needs.
-Managed and develop projects using Devops technics with tools like Docker, Vagrant and Git.
+Managed and develop projects using Devops techniques with tools like Docker, Vagrant and Git.
 Mentored team members in technologies like JavaEE, Ruby on Rails, Cordova, Angular.js and Scala.
 Deploy applications to production infrastructure.&lt;/p&gt;
 
@@ -53,12 +62,12 @@ Used technologies like Asterisk, CoronaSDK, Ruby on Rails and Android SDK.&lt;/p
 
 &lt;p&gt;Developed modules for a web application to control enterprise resources like clients, cases and information from operators, assistants and supervisors.&lt;/p&gt;
 
-&lt;h3 id=&#34;quirks&#34;&gt;Quirks&lt;/h3&gt;
+&lt;h3 id=&#34;other-abilities&#34;&gt;Other abilities&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Amateur salsa dancer&lt;/li&gt;
 &lt;li&gt;Professional beer lover&lt;/li&gt;
 &lt;li&gt;Avid non-standard traveler&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Very&lt;/em&gt; amateur salsa dancer&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
