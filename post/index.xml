@@ -121,9 +121,7 @@ Allocated 1492 MB
 Allocated 1493 MB
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;ksys-on-allocated-and-relased-memory&#34;&gt;&lt;em&gt;Ksys on allocated and relased memory&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;http://edur.me/static/posts/container_resources/memory_chart.png&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;!--&lt;center&gt;&lt;img src=&#34;http://edur.me/static/posts/container_resources/memory_chart.png&#34; /&gt;&lt;/center&gt;--&gt;
 </description>
     </item>
     
