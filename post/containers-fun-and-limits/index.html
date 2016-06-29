@@ -1,11 +1,10 @@
-    <!DOCTYPE html>
+  <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.16" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title> Starting up | Central America &middot; Starting up | Central America </title>
+    <title> Fun with resource limits in docker containers &middot; Starting up | Central America </title>
     
     <link rel="stylesheet" type="text/css" href="http://edur.me/css/uno.min.css" />
     <link rel="stylesheet" type="text/css" href="http://edur.me/css/lightGallery.css" />
@@ -13,24 +12,22 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://edur.me/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="http://edur.me/favicon.ico">
     
-    <link href="http://edur.me/index.xml" rel="alternate" type="application/rss+xml" title="Starting up | Central America" />
+    <link href="" rel="alternate" type="application/rss+xml" title="Starting up | Central America" />
     
     <script src="http://edur.me/js/jquery.min.js"></script>
     <script src="http://edur.me/js/main.min.js">
     </script>
 </head>
 
-    <body>
-        <div id="scriptHeader">
+  <body>
+    <div id="scriptHeader">
     <span class="mobile btn-mobile-menu">
             <i class="fa fa-bars btn-mobile-menu__icon"></i>
             <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
     </span>
     <header class="
         
-        
-                panel-cover
-        
+            panel-cover panel-cover--collapsed
         "  style="background-image: url(/coatepeque.jpg)" >
     <div class="panel-main">
         <div class="panel-main__inner panel-inverted">
@@ -137,40 +134,147 @@
     </header>
 </noscript>
 
-        <div class="content-wrapper">
-            <div class="content-wrapper__inner">
-                <section id="main">
-                    <div>
-                        
-                            
-                                <article class="post">
-<header>
-<h2><a href="http://edur.me/post/containers-fun-and-limits/">Fun with resource limits in docker containers </a> </h2>
-<div class="post-meta">Sun, Apr 26, 2015 - Read in 3 Min </div>
-</header>
-<div class="summary">
-    Resources in devices and infrastructure is limited and always valuable, some of them could be Memory CPU File size Disk space Network usage Disk I/O utilization Network I/O utilization Processes amount Today we&rsquo;ll set up to tinker with memory limits and get a new oversight this brave and not-so-new world of containers. Memory For memory usage we&rsquo;ll be using a little tool found in www.linuxatemyram.com that&rsquo;ll just gobble up memory as possible and then exit.
-</div>
-<footer>
-<a href='http://edur.me/post/containers-fun-and-limits/'><nobr>Read more →</nobr></a>
-</footer>
-</article>
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <div class="post">
+          <h1>Fun with resource limits in docker containers</h1>
+          <span class="post-date">Sun, Apr 26, 2015</span>
+          
 
+<p>Resources in devices and infrastructure is limited and always valuable, some of them could be</p>
 
-                            
-                        
-                            
-                        
-                    </div>
-                    </br>
-                    <h4>
-                        <a href="http://edur.me/post/">Archive</a>
-                    </h4>
-                </section>
-            </div>
+<ul>
+<li>Memory</li>
+<li>CPU</li>
+<li>File size</li>
+<li>Disk space</li>
+<li>Network usage</li>
+<li>Disk I/O utilization</li>
+<li>Network I/O utilization</li>
+<li>Processes amount</li>
+</ul>
+
+<p>Today we&rsquo;ll set up to tinker with memory limits and get a new oversight this brave and not-so-new world of containers.</p>
+
+<h1 id="memory">Memory</h1>
+
+<p>For memory usage we&rsquo;ll be using a little tool found in <a href="http://www.linuxatemyram.com/play.html">www.linuxatemyram.com</a> that&rsquo;ll just gobble up memory as possible and then exit.</p>
+
+<pre><code>$ ./eatram.bin
+Allocated 1 MB
+Allocated 2 MB
+[...]
+</code></pre>
+
+<h3 id="classical-linux-process-limiting">Classical linux process limiting</h3>
+
+<p>There&rsquo;s a well known utlity for setting limits in a current shell called <a href="http://ss64.com/bash/ulimit.html">ulimit</a>, it allow us to set the maximum resources allowed for programs running under a shell.</p>
+
+<p>It handles two types of limits, <em>soft limits</em> and <em>hard limits</em> (also defined for the pam_limits module usually under /etc/security/limits.conf).</p>
+
+<p><em>Soft limits</em> should always be limited by the hard limits and are allowed to be raised and lowered by a normal user.
+<em>Hard limits</em> can be raised only by the root user.</p>
+
+<p>The usage for limiting the virtual memory to 20480KiB</p>
+
+<pre><code>$ (ulimit -v 20480; ./eatram.bin) 
+</code></pre>
+
+<p>After some playing around we can find the minimal memory required in the current setup to print at least 1MiB of allocated memory, any number under this will stop printing or fail loading necessary libraries (if dynamically linked) or even the shell itself.</p>
+
+<pre><code>$ (ulimit -v 2043; ./eatram.bin) 
+</code></pre>
+
+<p>So in order to print the aproximated 20480KiB allocated before we would need.</p>
+
+<pre><code>$ (ulimit -v 22523; ./eatram.bin)
+[...]
+Allocated 17 MB
+Allocated 18 MB
+Allocated 19 MB
+Allocated 20 MB
+</code></pre>
+
+<p>This without taking into account the possibility of using linux <a href="http://en.wikipedia.org/wiki/Cgroups">cgroups</a> directly.</p>
+
+<h3 id="docker-limiting-container-memory">Docker limiting container memory</h3>
+
+<h4 id="building-our-test-image"><em>Building our test image</em></h4>
+
+<p>In order to play around with docker memory limits we&rsquo;ll need to create a image wrapping our test binary.</p>
+
+<pre><code>FROM scratch
+ADD eatram.bin /
+CMD [&quot;/eatram.bin&quot;]
+</code></pre>
+
+<p>Building our image</p>
+
+<pre><code>$ docker build -t eatram_exp .
+</code></pre>
+
+<h4 id="running-a-container"><em>Running a container</em></h4>
+
+<p>Now time to run our test with some memory limits</p>
+
+<pre><code>$ docker run -it -m 64m --memory-swap=80m  eatram_exp
+WARNING: Your kernel does not support swap limit capabilities. Limitation discarded.
+</code></pre>
+
+<p>As we can see there&rsquo;s something odd, in Archlinux default kernel 3.19.3-3 x86_64 and probably in most distributions swap limitations aren&rsquo;t by default (which seems to be <a href="http://docs.docker.com/installation/ubuntulinux/#adjust-memory-and-swap-accounting">enabled</a> from GRUB command line).</p>
+
+<p>Yet it seems to finish very close to our 64MiB limits</p>
+
+<pre><code>[...]    
+Allocated 61 MB
+Allocated 62 MB
+Allocated 63 MB
+</code></pre>
+
+<p>After enabling our kernel to manage swap through cgroups adding to our grub command line.</p>
+
+<pre><code>cgroup_enable=memory swapaccount=1
+</code></pre>
+
+<p>We run again our test and get exactly the results we were looking for</p>
+
+<pre><code>docker run -it -m 260m --memory-swap=1500m  eatram_exp
+[...]
+Allocated 1491 MB
+Allocated 1492 MB
+Allocated 1493 MB
+</code></pre>
+
+<h4 id="ksys-on-allocated-and-relased-memory"><em>Ksys on allocated and relased memory</em></h4>
+
+<p><center><img src="http://edur.me/static/posts/container_resources/memory_chart.png" /></center></p>
+
         </div>
-        <footer class="footer"></footer>
-
+        <div class="sharing">
+<a href="https://twitter.com/intent/tweet?status=Fun%20with%20resource%20limits%20in%20docker%20containers-http%3a%2f%2fedur.me%2fpost%2fcontainers-fun-and-limits%2f" target="_blank" title="Follow me on Twitter" class="twitter">
+<span class="fa fa-twitter-square fa-3x"></span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fedur.me%2fpost%2fcontainers-fun-and-limits%2f" target="_blank" title="Join me on Facebook" class="facebook">
+<span class="fa fa-facebook-square fa-3x"></span></a>
+<a href="https://plus.google.com/share?url=http%3a%2f%2fedur.me%2fpost%2fcontainers-fun-and-limits%2f" target="_blank" title="Google+" class="googleplus">
+<span class="fa fa-google-plus-square fa-3x"></span></a>
+<a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fedur.me%2fpost%2fcontainers-fun-and-limits%2f&title=Fun%20with%20resource%20limits%20in%20docker%20containers" target="_blank" title="LinkedIn" class="linkedin">
+<span class="fa fa-linkedin-square fa-3x"></span></a>
+<a href="http://www.reddit.com/submit?url=http%3a%2f%2fedur.me%2fpost%2fcontainers-fun-and-limits%2f" target="_blank" title="Reddit" class="reddit"><span class="fa fa-reddit-square fa-3x"></span></a>
+<a href="http://www.stumbleupon.com/submit?url=http%3a%2f%2fedur.me%2fpost%2fcontainers-fun-and-limits%2f" target="_blank" title="StumbleUpon" class="stumbleupon"><span class="fa fa-stumbleupon fa-3x">
+</span></a>
+</div>
         
-    </body>
+<section class="post-comments">
+<a class="muut" href="https://muut.com/i/edurme/comments:Fun%20with%20resource%20limits%20in%20docker%20containers">Comments</a>
+<script src="//cdn.muut.com/1/moot.min.js"></script>
+</section>
+
+
+
+
+      </div>
+    </div>
+
+  </body>
+  
 </html>

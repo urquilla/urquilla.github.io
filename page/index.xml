@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Pages on Starting up | Central America </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://edur.me/page/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Sun, 29 Mar 2015 15:19:15 CST</updated>
+    
+    <item>
+      <title></title>
+      <link>http://edur.me/page/cv/</link>
+      <pubDate>Sun, 29 Mar 2015 15:19:15 CST</pubDate>
+      
+      <guid>http://edur.me/page/cv/</guid>
+      <description>
+
+&lt;h1 id=&#34;edwin-urquilla&#34;&gt;Edwin Urquilla&lt;/h1&gt;
+
+&lt;h3 id=&#34;about-me&#34;&gt;About me&lt;/h3&gt;
+
+&lt;p&gt;Salvadorean engineer, project leader, architect and developer.&lt;br /&gt;
+Avid autodidact striving to push forward a pragmatic change in the industry.
+Looking to never stop traveling and always making a difference.
+Currently enjoying work and challenges at &lt;a href=&#34;http://mido-sv.com&#34;&gt;Midő sv&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--### Projects--&gt;
+
+&lt;h3 id=&#34;experience&#34;&gt;Experience&lt;/h3&gt;
+
+&lt;h4 id=&#34;midō-international-http-mido-sv-com&#34;&gt;&lt;a href=&#34;http://mido-sv.com&#34;&gt;Midō International&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h5 id=&#34;technical-lead-and-cto&#34;&gt;&lt;em&gt;Technical Lead And CTO&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;Interviewed and introduced new members of the technical team.
+Architect and develop solutions for government and financial entities, as well for diverse enterprises with technological needs.
+Managed and develop projects using Devops technics with tools like Docker, Vagrant and Git.
+Mentored team members in technologies like JavaEE, Ruby on Rails, Cordova, Angular.js and Scala.
+Deploy applications to production infrastructure.&lt;/p&gt;
+
+&lt;h4 id=&#34;freelance-developer&#34;&gt;Freelance Developer&lt;/h4&gt;
+
+&lt;h5 id=&#34;freelance-as-a-web-mobile-developer&#34;&gt;Freelance as a ( Web | Mobile ) Developer&lt;/h5&gt;
+
+&lt;p&gt;Developed projects from games to IVR systems with focus on e-commerce sites.
+Used technologies like Asterisk, CoronaSDK, Ruby on Rails and Android SDK.&lt;/p&gt;
+
+&lt;h4 id=&#34;manuel-solís-law-firm&#34;&gt;Manuel Solís Law Firm&lt;/h4&gt;
+
+&lt;h5 id=&#34;web-developer&#34;&gt;Web Developer&lt;/h5&gt;
+
+&lt;p&gt;Developed modules for a web application to control enterprise resources like clients, cases and information from operators, assistants and supervisors.&lt;/p&gt;
+
+&lt;h3 id=&#34;quirks&#34;&gt;Quirks&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Amateur salsa dancer&lt;/li&gt;
+&lt;li&gt;Professional beer lover&lt;/li&gt;
+&lt;li&gt;Avid non-standard traveler&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
