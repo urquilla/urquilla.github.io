@@ -1,128 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Development on Starting up | Central America </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>Development on Starting up | Central America</title>
     <link>http://edur.me/categories/development/</link>
+    <description>Recent content in Development on Starting up | Central America</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 26 Apr 2015 11:52:25 -0600</lastBuildDate>
     
+	<atom:link href="http://edur.me/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
-    <updated>Sun, 26 Apr 2015 11:52:25 CST</updated>
     
     <item>
       <title>Fun with resource limits in docker containers</title>
       <link>http://edur.me/post/containers-fun-and-limits/</link>
-      <pubDate>Sun, 26 Apr 2015 11:52:25 CST</pubDate>
+      <pubDate>Sun, 26 Apr 2015 11:52:25 -0600</pubDate>
       
       <guid>http://edur.me/post/containers-fun-and-limits/</guid>
-      <description>
-
-&lt;p&gt;Resources in devices and infrastructure is limited and always valuable, some of them could be&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Memory&lt;/li&gt;
-&lt;li&gt;CPU&lt;/li&gt;
-&lt;li&gt;File size&lt;/li&gt;
-&lt;li&gt;Disk space&lt;/li&gt;
-&lt;li&gt;Network usage&lt;/li&gt;
-&lt;li&gt;Disk I/O utilization&lt;/li&gt;
-&lt;li&gt;Network I/O utilization&lt;/li&gt;
-&lt;li&gt;Processes amount&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Today we&amp;rsquo;ll set up to tinker with memory limits and get a new oversight this brave and not-so-new world of containers.&lt;/p&gt;
-
-&lt;h1 id=&#34;memory&#34;&gt;Memory&lt;/h1&gt;
-
-&lt;p&gt;For memory usage we&amp;rsquo;ll be using a little tool found in &lt;a href=&#34;http://www.linuxatemyram.com/play.html&#34;&gt;www.linuxatemyram.com&lt;/a&gt; that&amp;rsquo;ll just gobble up memory as possible and then exit.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ ./eatram.bin
-Allocated 1 MB
-Allocated 2 MB
-[...]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;classical-linux-process-limiting&#34;&gt;Classical linux process limiting&lt;/h3&gt;
-
-&lt;p&gt;There&amp;rsquo;s a well known utlity for setting limits in a current shell called &lt;a href=&#34;http://ss64.com/bash/ulimit.html&#34;&gt;ulimit&lt;/a&gt;, it allow us to set the maximum resources allowed for programs running under a shell.&lt;/p&gt;
-
-&lt;p&gt;It handles two types of limits, &lt;em&gt;soft limits&lt;/em&gt; and &lt;em&gt;hard limits&lt;/em&gt; (also defined for the pam_limits module usually under /etc/security/limits.conf).&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Soft limits&lt;/em&gt; should always be limited by the hard limits and are allowed to be raised and lowered by a normal user.
-&lt;em&gt;Hard limits&lt;/em&gt; can be raised only by the root user.&lt;/p&gt;
-
-&lt;p&gt;The usage for limiting the virtual memory to 20480KiB&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ (ulimit -v 20480; ./eatram.bin) 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After some playing around we can find the minimal memory required in the current setup to print at least 1MiB of allocated memory, any number under this will stop printing or fail loading necessary libraries (if dynamically linked) or even the shell itself.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ (ulimit -v 2043; ./eatram.bin) 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So in order to print the aproximated 20480KiB allocated before we would need.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ (ulimit -v 22523; ./eatram.bin)
-[...]
-Allocated 17 MB
-Allocated 18 MB
-Allocated 19 MB
-Allocated 20 MB
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This without taking into account the possibility of using linux &lt;a href=&#34;http://en.wikipedia.org/wiki/Cgroups&#34;&gt;cgroups&lt;/a&gt; directly.&lt;/p&gt;
-
-&lt;h3 id=&#34;docker-limiting-container-memory&#34;&gt;Docker limiting container memory&lt;/h3&gt;
-
-&lt;h4 id=&#34;building-our-test-image&#34;&gt;&lt;em&gt;Building our test image&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;In order to play around with docker memory limits we&amp;rsquo;ll need to create a image wrapping our test binary.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;FROM scratch
-ADD eatram.bin /
-CMD [&amp;quot;/eatram.bin&amp;quot;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Building our image&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ docker build -t eatram_exp .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;running-a-container&#34;&gt;&lt;em&gt;Running a container&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;Now time to run our test with some memory limits&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ docker run -it -m 64m --memory-swap=80m  eatram_exp
-WARNING: Your kernel does not support swap limit capabilities. Limitation discarded.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As we can see there&amp;rsquo;s something odd, in Archlinux default kernel 3.19.3-3 x86_64 and probably in most distributions swap limitations aren&amp;rsquo;t by default (which seems to be &lt;a href=&#34;http://docs.docker.com/installation/ubuntulinux/#adjust-memory-and-swap-accounting&#34;&gt;enabled&lt;/a&gt; from GRUB command line).&lt;/p&gt;
-
-&lt;p&gt;Yet it seems to finish very close to our 64MiB limits&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[...]    
-Allocated 61 MB
-Allocated 62 MB
-Allocated 63 MB
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After enabling our kernel to manage swap through cgroups adding to our grub command line.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cgroup_enable=memory swapaccount=1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We run again our test and get exactly the results we were looking for&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;docker run -it -m 260m --memory-swap=1500m  eatram_exp
-[...]
-Allocated 1491 MB
-Allocated 1492 MB
-Allocated 1493 MB
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;!--&lt;center&gt;&lt;img src=&#34;http://edur.me/static/posts/container_resources/memory_chart.png&#34; /&gt;&lt;/center&gt;--&gt;
-</description>
+      <description>Resources in devices and infrastructure is limited and always valuable, some of them could be
+ Memory CPU File size Disk space Network usage Disk I/O utilization Network I/O utilization Processes amount  Today we&amp;rsquo;ll set up to tinker with memory limits and get a new oversight this brave and not-so-new world of containers.
+Memory For memory usage we&amp;rsquo;ll be using a little tool found in www.linuxatemyram.com that&amp;rsquo;ll just gobble up memory as possible and then exit.</description>
     </item>
     
   </channel>

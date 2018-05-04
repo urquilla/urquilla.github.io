@@ -1,156 +1,172 @@
-    <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Development</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkblue;
+        --border-width:  0 ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://edur.me/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.2" />
+        
+        <link href="http://edur.me/categories/development/index.xml" rel="alternate" type="application/rss+xml" title="Starting up | Central America" />
+        <link href="http://edur.me/categories/development/index.xml" rel="feed" type="application/rss+xml" title="Starting up | Central America" />
+        
+
+        
+    </head>
+
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title> Development &middot; Starting up | Central America </title>
     
-    <link rel="stylesheet" type="text/css" href="http://edur.me/css/uno.min.css" />
-    <link rel="stylesheet" type="text/css" href="http://edur.me/css/lightGallery.css" />
-    
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://edur.me/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="http://edur.me/favicon.ico">
-    
-    <link href="http://edur.me/categories/development/index.xml" rel="alternate" type="application/rss+xml" title="Starting up | Central America" />
-    
-    <script src="http://edur.me/js/jquery.min.js"></script>
-    <script src="http://edur.me/js/main.min.js">
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
-</head>
+    
 
     <body>
-        <div id="scriptHeader">
-    <span class="mobile btn-mobile-menu">
-            <i class="fa fa-bars btn-mobile-menu__icon"></i>
-            <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
-    </span>
-    <header class="
-        
-        
-            panel-cover panel-cover--collapsed
-        
-        "  style="background-image: url(/coatepeque.jpg)" >
-    <div class="panel-main">
-        <div class="panel-main__inner panel-inverted">
-            <div class="panel-main__content"> 
-                <a href="http://edur.me/" title="link to homepage for Starting up | Central America"> <img src="http://edur.me/photo3.jpg" width="80" alt="Starting up | Central America logo" class="panel-cover__logo logo" /> </a> 
-                <h1 class="panel-cover__title panel-title">
-                    <a href="http://edur.me/"  title="link to homepage for Starting up | Central America">Starting up | Central America</a>
-                </h1>
-                <hr class="panel-cover__divider" />
-                <p class="panel-cover__description">  Wild Tech  </p>
-                <hr class="panel-cover__divider panel-cover__divider--secondary" />
-                <div class="navigation-wrapper">
-                    <nav class="cover-navigation cover-navigation--primary">
-                        <ul class="navigation">
-                            <li class="navigation__item"><a href="http://edur.me#blog" title="link to Starting up | Central America blog" class="blog-button">Blog</a> </li></br>
-                            <li class="navigation__item"><a href="http://edur.me/page/cv" title="link to my CV " class="blog-button">CV</a> </li></br> 
-                            
-                       </ul>
-                    </nav> <nav class="cover-navigation navigation--social">
-    <ul class="navigation"> 
-        
-        <li class="navigation__item">
-            <a href="http://twitter.com/edwin_os" title="@edwin_os on Twitter"> <i class='fa fa-twitter'></i> <span class="label">Twitter</span> </a>
-        </li>  
-        
-        <li class="navigation__item">
-            <a href="https://bitbucket.org/edwin_os" title="edwin_os on bitbucket"> <i class='fa fa-bitbucket'></i> <span class="label">Bitbucket</span> </a>
-        </li>  
-        
-        <li class="navigation__item">
-            <a href="https://github.com/urquilla" title="urquilla on github"> <i class='fa fa-github'></i> <span class="label">Github</span> </a>
-        </li>  </br>  
-        
-        <li class="navigation__item">
-            <a href="http://no.linkedin.com/in/edwinurquilla/en" title="Linkedin"> <i class='fa fa-linkedin'></i> <span class="label">Linkedin</span> </a>
-        </li>  
-        
-        <li class="navigation__item">
-            <a href="mailto:edwin.urquilla@gmail.com" title="Email edwin.urquilla@gmail.com"> <i class='fa fa-envelope-o'></i> <span class="label">Email</span> </a>
-        </li>  </ul>
-</nav>
- </div>
-            </div>
-        </div>
-        <div class="panel-cover--overlay"></div>
-    </div>
-</header>
-</div>
-<noscript>
-    <style>
-        #scriptHeader {display:none;}
-        .navigation-wrapper{
-            display: block;
-            top: 0;
-        }
-    </style>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
 
-    <header class="panel-cover panel-cover--collapsed" style="background-image: url(/coatepeque.jpg)">
-        <div class="panel-main">
-            <div class="panel-main__inner panel-inverted">
-                <div class="panel-main__content"> 
-                    <a href="http://edur.me/" title="link to homepage for Starting up | Central America"> <img src="http://edur.me/photo3.jpg" width="80" alt="Starting up | Central America logo" class="panel-cover__logo logo" /> </a> 
-                    <h1 class="panel-cover__title panel-title">
-                        <a href="http://edur.me/"  title="link to homepage for Starting up | Central America">Starting up | Central America</a>
-                    </h1>
-                    <hr class="panel-cover__divider" />
-                    <p class="panel-cover__description">  Wild Tech  </p>
-                    <hr class="panel-cover__divider panel-cover__divider--secondary" />
-                    <div class="navigation-wrapper">
-                        <nav class="cover-navigation cover-navigation--primary">
-                            <ul class="navigation">
-                                <li class="navigation__item"><a href="http://edur.me/#blog" title="link to Starting up | Central America blog" class="blog-button">Blog</a> </li></br>
-                                <li class="navigation__item"><a href="http://edur.me/page/cv" title="link to my CV " class="blog-button">CV</a> </li></br> 
-                                
-                           </ul>
-                        </nav> <nav class="cover-navigation navigation--social">
-    <ul class="navigation"> 
-        
-        <li class="navigation__item">
-            <a href="http://twitter.com/edwin_os" title="@edwin_os on Twitter"> <i class='fa fa-twitter'></i> <span class="label">Twitter</span> </a>
-        </li>  
-        
-        <li class="navigation__item">
-            <a href="https://bitbucket.org/edwin_os" title="edwin_os on bitbucket"> <i class='fa fa-bitbucket'></i> <span class="label">Bitbucket</span> </a>
-        </li>  
-        
-        <li class="navigation__item">
-            <a href="https://github.com/urquilla" title="urquilla on github"> <i class='fa fa-github'></i> <span class="label">Github</span> </a>
-        </li>  </br>  
-        
-        <li class="navigation__item">
-            <a href="http://no.linkedin.com/in/edwinurquilla/en" title="Linkedin"> <i class='fa fa-linkedin'></i> <span class="label">Linkedin</span> </a>
-        </li>  
-        
-        <li class="navigation__item">
-            <a href="mailto:edwin.urquilla@gmail.com" title="Email edwin.urquilla@gmail.com"> <i class='fa fa-envelope-o'></i> <span class="label">Email</span> </a>
-        </li>  </ul>
-</nav>
- </div>
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Development</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
                 </div>
-            </div>
-            <div class="panel-cover--overlay"></div>
-        </div>
-    </header>
-</noscript>
 
-        <div class="content-wrapper">
-            <div class="content-wrapper__inner">
-                
-                <h2>2015</h2>
-                <ul id="list">
+                <div class="collapse navbar-collapse">
+
                     
-                    <li>
-                        <a href="http://edur.me/post/containers-fun-and-limits/">Fun with resource limits in docker containers </a>
-                        <div class="meta">Sun, Apr 26, 2015</div>
-                    </li>
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="http://edur.me/">Home</a></li>
+                            
+                                <li><a href="http://edur.me/post/">Posts</a></li>
+                            
+                                <li><a href="http://edur.me/page/cv">Resume</a></li>
+                            
+                        </ul>
                     
-                </ul>
-                
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:edwin.urquilla@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/urquilla/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/gamblestick/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/edwinurquilla/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
             </div>
-        </div>
-    </body>
+
+        </nav>
+
+
+<main>
+
+    <h2>Development</h2>
+
+     <div class="item">
+
     
+    
+    
+
+    
+      
+
+    <h4><a href="http://edur.me/post/containers-fun-and-limits/">Fun with resource limits in docker containers</a></h4>
+    <h5>Dwelving into useful restrictions</h5>
+    
+    <a href="http://edur.metags/development"><kbd class="item-tag">Development</kbd></a>
+    
+    <a href="http://edur.metags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="http://edur.metags/devops"><kbd class="item-tag">Devops</kbd></a>
+    
+
+</div>
+ 
+
+</main>
+
+
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
 </html>
+
