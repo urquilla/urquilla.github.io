@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development on Starting up | Central America</title>
+    <title>Development on Edwin&#39;s Blog</title>
     <link>http://edur.me/categories/development/</link>
-    <description>Recent content in Development on Starting up | Central America</description>
+    <description>Recent content in Development on Edwin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Apr 2015 11:52:25 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2015 00:00:00 -0600</lastBuildDate>
     
 	<atom:link href="http://edur.me/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Fun with resource limits in docker containers</title>
       <link>http://edur.me/post/containers-fun-and-limits/</link>
-      <pubDate>Sun, 26 Apr 2015 11:52:25 -0600</pubDate>
+      <pubDate>Sun, 26 Apr 2015 00:00:00 -0600</pubDate>
       
       <guid>http://edur.me/post/containers-fun-and-limits/</guid>
       <description>Resources in devices and infrastructure is limited and always valuable, some of them could be

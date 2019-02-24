@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on Starting up | Central America</title>
+    <title>Pages on Edwin&#39;s Blog</title>
     <link>http://edur.me/page/</link>
-    <description>Recent content in Pages on Starting up | Central America</description>
+    <description>Recent content in Pages on Edwin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jun 2016 12:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 14 Feb 2019 12:00:00 -0600</lastBuildDate>
     
 	<atom:link href="http://edur.me/page/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,13 +14,13 @@
     <item>
       <title></title>
       <link>http://edur.me/page/cv/</link>
-      <pubDate>Wed, 29 Jun 2016 12:00:00 -0600</pubDate>
+      <pubDate>Thu, 14 Feb 2019 12:00:00 -0600</pubDate>
       
       <guid>http://edur.me/page/cv/</guid>
       <description>Edwin Urquilla About me Salvadoran engineer, project leader, architect and developer.
-Avid autodidact striving to push forward a pragmatic change in the industry. Looking to never stop traveling and always making a difference. Currently enjoying work and challenges at Midō sv and SIGMuni
-Experience Sistema de Información de la Gestión Municipal Sysadmin, Developer And Tech Consultant Software Architect and Linux sysadmin of on premises servers
-Front end developer with React.</description>
+Avid autodidact striving to push forward a pragmatic change in the industry. Looking to never stop traveling and always making a difference. Currently enjoying work and challenges at Synopsys Inc.
+Experience Synopsys Inc Software Engineer TELUS International Java Developer (Full stack and Netcracker developer) (2016) Developed automatic inventory provisioning tools.
+Provisioned items like phone numbers, IP trunking services, etc.</description>
     </item>
     
   </channel>
