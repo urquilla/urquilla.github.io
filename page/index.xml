@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Edwin&#39;s Blog</title>
-    <link>https://edur.me/page/</link>
+    <link>https://www.edur.me/page/</link>
     <description>Recent content in Pages on Edwin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Feb 2019 12:00:00 -0600</lastBuildDate>
     
-	<atom:link href="https://edur.me/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.edur.me/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://edur.me/page/cv/</link>
+      <link>https://www.edur.me/page/cv/</link>
       <pubDate>Thu, 14 Feb 2019 12:00:00 -0600</pubDate>
       
-      <guid>https://edur.me/page/cv/</guid>
+      <guid>https://www.edur.me/page/cv/</guid>
       <description>Edwin Urquilla About me Salvadoran engineer, project leader, architect and developer.
 Avid autodidact striving to push forward a pragmatic change in the industry. Looking to never stop traveling and always making a difference. Currently enjoying work and challenges at Synopsys Inc.
 Experience Synopsys Inc Software Engineer TELUS International Java Developer (Full stack and Netcracker developer) (2016) Developed automatic inventory provisioning tools.
