@@ -1,68 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://edur.me/page/cv/</loc>
+    <loc>https://edur.me/page/cv/</loc>
+    <lastmod>2019-10-14T11:14:04-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://edur.me/</loc>
+    <lastmod>2019-10-14T11:14:04-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://edur.me/page/</loc>
+    <lastmod>2019-10-14T11:14:04-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://edur.me/categories/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://edur.me/post/containers-fun-and-limits/</loc>
+    <loc>https://edur.me/categories/development/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://edur.me/categories/</loc>
-    <priority>0</priority>
+    <loc>https://edur.me/tags/development/</loc>
+    <lastmod>2019-02-24T12:31:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://edur.me/tags/development/</loc>
+    <loc>https://edur.me/tags/devops/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://edur.me/categories/development/</loc>
+    <loc>https://edur.me/tags/docker/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://edur.me/tags/devops/</loc>
+    <loc>https://edur.me/post/containers-fun-and-limits/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://edur.me/tags/docker/</loc>
+    <loc>https://edur.me/post/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://edur.me/</loc>
+    <loc>https://edur.me/tags/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://edur.me/page/</loc>
-    <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://edur.me/post/</loc>
-    <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://edur.me/tags/</loc>
-    <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>
