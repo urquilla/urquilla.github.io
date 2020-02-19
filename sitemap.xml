@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.edur.me/page/gpg/</loc>
+    <lastmod>2019-02-14T12:00:00-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.edur.me/</loc>
     <lastmod>2019-10-14T11:14:04-06:00</lastmod>
   </url>
@@ -23,12 +28,12 @@
   </url>
   
   <url>
-    <loc>https://www.edur.me/categories/development/</loc>
+    <loc>https://www.edur.me/tags/development/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.edur.me/tags/development/</loc>
+    <loc>https://www.edur.me/categories/development/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
   </url>
   
