@@ -6,19 +6,15 @@
     <description>Recent content in Development on Edwin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Apr 2015 00:00:00 -0600</lastBuildDate>
-    
-	<atom:link href="https://www.edur.me/categories/development/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 26 Apr 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://www.edur.me/categories/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fun with resource limits in docker containers</title>
       <link>https://www.edur.me/post/containers-fun-and-limits/</link>
-      <pubDate>Sun, 26 Apr 2015 00:00:00 -0600</pubDate>
+      <pubDate>Sun, 26 Apr 2015 00:00:00 +0000</pubDate>
       
       <guid>https://www.edur.me/post/containers-fun-and-limits/</guid>
       <description>Resources in devices and infrastructure is limited and always valuable, some of them could be
- Memory CPU File size Disk space Network usage Disk I/O utilization Network I/O utilization Processes amount  Today we&amp;rsquo;ll set up to tinker with memory limits and get a new oversight this brave and not-so-new world of containers.
+Memory CPU File size Disk space Network usage Disk I/O utilization Network I/O utilization Processes amount Today we&amp;rsquo;ll set up to tinker with memory limits and get a new oversight this brave and not-so-new world of containers.
 Memory For memory usage we&amp;rsquo;ll be using a little tool found in www.linuxatemyram.com that&amp;rsquo;ll just gobble up memory as possible and then exit.</description>
     </item>
     

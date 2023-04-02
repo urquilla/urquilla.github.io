@@ -1,65 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://www.edur.me/page/cv/</loc>
     <lastmod>2019-10-14T11:14:04-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.edur.me/page/gpg/</loc>
-    <lastmod>2019-02-14T12:00:00-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.edur.me/</loc>
     <lastmod>2019-10-14T11:14:04-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.edur.me/page/</loc>
     <lastmod>2019-10-14T11:14:04-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.edur.me/categories/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.edur.me/tags/development/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.edur.me/categories/development/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.edur.me/tags/devops/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.edur.me/tags/docker/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.edur.me/post/containers-fun-and-limits/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.edur.me/post/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.edur.me/tags/</loc>
     <lastmod>2019-02-24T12:31:54-07:00</lastmod>
   </url>
-  
 </urlset>
